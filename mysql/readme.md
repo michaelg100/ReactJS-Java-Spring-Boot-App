@@ -1,25 +1,25 @@
-#run via docker
+# run via docker
 ```
 docker run --name mysql-db -p3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 ```
 
-#exec into the container to add user
+# exec into the container to add user
 ```
 docker exec -t -i mysql-db /bin/bash
 ```
 
-#open mysql
+# open mysql
 ```
 mysql -u root -p
 ```
 
-#enter the password after MYSQL_ROOT_PASSWORD
+# enter the password after MYSQL_ROOT_PASSWORD
 ```
 my-secret-pw
 ```
 
-#you should now be in mysql as root
-#create a new user that we will access from the app
+# you should now be in mysql as root
+# create a new user that we will access from the app
 ```
 CREATE USER 'mike'@'localhost' IDENTIFIED BY 'new_password';
 ```
