@@ -1,4 +1,4 @@
-# (optional) start via bash script
+# (optional) start via bash script if have a .sql script file to run
 ```
 bash ./setupdb.sh
 ```
