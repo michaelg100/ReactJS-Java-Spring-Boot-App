@@ -1,3 +1,8 @@
+# (optional) start via bash script
+```
+bash ./setupdb.sh
+```
+
 # run via docker
 ```
 docker run --name mysql-db -p3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
