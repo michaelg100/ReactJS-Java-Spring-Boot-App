@@ -1,6 +1,6 @@
 #!/bin/bash
-IMAGE = 'soap-mysql-container'
-CONTAINER = 'soap-mysql-container'
+IMAGE = 'mysql-container'
+CONTAINER = 'mysql-container'
 
 yes | docker system prune -a
 
@@ -17,6 +17,6 @@ docker build -f Dockerfile -t $IMAGE .
 
 echo "run container"
 
-docker run -d -t --name $CONTAINER -p 4040:3306 \
+docker run -d -t --name $CONTAINER -p 3306:3306 \
     -v $(pwd):/app \
     $IMAGE
